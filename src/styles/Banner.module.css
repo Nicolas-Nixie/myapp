@@ -1,6 +1,11 @@
 .lmjbanner {
     color:azure;
-    text-align: right;
+    text-align: center;
     padding: 32px;
     border-bottom: solid 3px black;
+}
+
+.logo {
+    height: 45px;
+	width: 45px;
 }

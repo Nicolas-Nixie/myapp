@@ -1,4 +1,5 @@
 import React from "react"
+import styles from "../styles/Cart.module.css"
 
 function Cart() {
     <h2>Panier</h2>
@@ -22,7 +23,7 @@ function Cart() {
 
     return (
         <div>
-            <h1 className="Panier">Mon Panier</h1>
+            <h1 className={styles.panier}>Mon Panier</h1>
             <ul>
                 <li>{plante1.name + " son prix est de " + plante1.price + plante1.devise}</li>
                 <li>{plante2.name + " son prix est de " + plante2.price + plante2.devise}</li>
