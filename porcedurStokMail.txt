@@ -1,0 +1,29 @@
+LGLIMP_POUDR_STATUS = procédure stocké
+
+USE [Runtime]
+GO
+/****** Object:  StoredProcedure [dbo].[LGLIMP_POUDR_STATUS]    Script Date: 18/03/2022 10:43:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[LGLIMP_POUDR_STATUS]
+	-- Add the parameters for the stored procedure here
+	
+AS
+BEGIN
+
+
+SET QUOTED_IDENTIFIER OFF;
+	EXEC msdb.dbo.sp_send_dbmail  
+	@recipients = "info.indus@porcher-ind.com", 
+	@subject = "POUDREUSE",  
+	@body = "Le serveur HISTORIAN ne voit plus les variables de la supervision POUDREUSE. Email toutes les 2 min si pas de com",  
+	@exclude_query_output = 1
+
+END
